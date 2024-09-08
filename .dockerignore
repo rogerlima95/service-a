@@ -1,4 +1,5 @@
 helm/
+.github/
 .git
 node_modules
 Dockerfile
