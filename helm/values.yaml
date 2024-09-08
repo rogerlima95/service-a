@@ -1,0 +1,29 @@
+# Imagem Docker para o service-a
+image:
+  repository: rogerlima/service-a
+  tag: latest
+  pullPolicy: IfNotPresent
+
+# Configurações do RabbitMQ
+rabbitmq:
+  host: 10.10.10.7
+  port: 5672
+  user: user
+  queue: queue
+
+# Configurações do Kubernetes
+replicaCount: 1
+
+# Configurações de recursos do pod
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+# Porta de serviço
+service:
+  type: ClusterIP
+  port: 80
